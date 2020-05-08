@@ -1,0 +1,20 @@
+DEPENDENCIES:
+    glib
+    windows kit
+
+CONDUIT <--> CLIENT (1:1)
+
+TODO:
+
+
+SHOULDDO:
+    handling multiple Conduit Port:  one thread each port
+
+
+RETURN ERRORS
+0-9     Command line
+10-19   Conduit related
+20-29   Service Related
+
+DEPLOY:
+Copy all DLL to binary path from: C:\Developer\Tools\vcpkg-master\packages\glib_x64-windows\tools\glib\
