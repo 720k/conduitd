@@ -35,7 +35,7 @@ defineTest(copyToBin) {
         source_file = $$shell_path($$source_dir/$$file)
         dest_file = $$shell_path($$dest_dir/$$file)
         exists($$source_file) {
-            message(\$ $$QMAKE_COPY  $$shell_quote($$source_file)  $$shell_quote($$dest_file))
+            # message(\$ $$QMAKE_COPY  $$shell_quote($$source_file)  $$shell_quote($$dest_file))
             QMAKE_POST_LINK += $$QMAKE_COPY  $$shell_quote($$source_file)  $$shell_quote($$dest_file) $$escape_expand(\\n\\t)
         }
     }
@@ -49,7 +49,7 @@ win32 {
     WINKIT_LIB_PATH="C:/Windows Kits/10/Lib/10.0.18362.0/um/x64"
 
     # compiling
-    INCLUDEPATH += " $$VCPKG_GLIB_PATH/include"
+    INCLUDEPATH += "$$VCPKG_GLIB_PATH/include"
     #linking
     LIBS += "$$VCPKG_GLIB_PATH/lib/glib-2.0.lib" \
             "$$VCPKG_GLIB_PATH/lib/gio-2.0.lib" \
